@@ -82,6 +82,7 @@ npx ng config projects.'angular-with-material-postcss-tailwindcss'.architect.bui
 npx ng config projects.'angular-with-material-postcss-tailwindcss'.architect.build.options.customWebpackConfig.path "custom-webpack.config.ts"
 npx ng config projects.'angular-with-material-postcss-tailwindcss'.architect.serve.builder "@angular-builders/custom-webpack:dev-server"
 ```
+These 3 commands will set the builder for build and serve cli commands to the `custom-webpack` builder and points the builder to our custom webpack config file. The resulting changes should look similar to the changes to `angular.json` [in this commit](https://github.com/mattrenaud/angular-with-material-postcss-tailwindcss/commit/7454957f2fdf4a4ef3c38e1f14459bad12d7a9f5#diff-24e9645f54bc8704f0daa8780c492a3f).
 ### Add tailwind directives to the project CSS
 
 Set the contents of `src/style.css` to the following:
